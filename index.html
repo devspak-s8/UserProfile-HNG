@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A responsive and accessible user profile card for Apatira Sulayman" />
+  <title>User Profile Card</title>
+
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main id="main-content">
+    <article data-testid="test-profile-card">
+      <header>
+        <figure>
+          <img
+            data-testid="test-user-avatar" 
+src="./profile.jpg"
+            alt="Profile picture of Apatira Sulayman"
+          />
+        </figure>
+        <div>
+          <h1 data-testid="test-user-name">Apatira Sulayman</h1>
+          <p data-testid="test-user-bio">
+            Front-end developer passionate about creating elegant and accessible web experiences.  
+            Lifelong learner who loves solving real-world problems with clean, efficient code.
+          </p>
+
+          <time data-testid="test-user-time" datetime="" id="time-element">
+            Time: <span id="human-time">Loading...</span>
+            <span id="hidden-ms" style="display:none;"></span>
+          </time>
+        </div>
+      </header>
+
+      <nav data-testid="test-user-social-links" aria-label="Social links">
+        <h2>Connect</h2>
+        <ul>
+          <li><a data-testid="test-user-social-twitter" href="https://x.com/de_v_U" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+          <li><a data-testid="test-user-social-github" href="https://github.com/devspak-s8" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a data-testid="test-user-social-linkedin" href="https://linkedin.com/in/sulayman-apatira-techpro08" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a data-testid="test-user-social-email" href="mailto:apatirasulayman@gmail.com">Email</a></li>
+        </ul>
+      </nav>
+
+      <section>
+        <h2>Hobbies</h2>
+        <ul data-testid="test-user-hobbies">
+          <li>Photography</li>
+          <li>Coding</li>
+          <li>Reading</li>
+          <li>Exploring new tech</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Dislikes</h2>
+        <ul data-testid="test-user-dislikes">
+          <li>Slow internet</li>
+          <li>Cluttered UI</li>
+          <li>Bugs in production</li>
+          <li>Procrastination</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <!-- Link external JS -->
+  <script src="script.js"></script>
+</body>
+</html>
