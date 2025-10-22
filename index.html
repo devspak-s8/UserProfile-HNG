@@ -11,8 +11,21 @@
 </head>
 
 <body>
-  <main id="main-content">
-    <article data-testid="test-profile-card">
+
+ <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Added navigation bar -->
+    <nav class="navbar" aria-label="Main navigation">
+        <ul>
+            <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
+            <li><a href="#" data-page="contact" class="nav-link">Contact Us</a></li>
+            <li><a href="#" data-page="about" class="nav-link">About Me</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <!-- Home page section -->
+        <section id="home" class="page-section active">
+             <article data-testid="test-profile-card">
       <header>
         <figure>
           <img
@@ -65,9 +78,132 @@ src="./profile.jpg"
         </ul>
       </section>
     </article>
-  </main>
+        </section>
 
+        <!-- Contact Us page section -->
+        <section id="contact" class="page-section">
+            <div class="contact-form">
+                <h1>Contact Us</h1>
+                <div class="success-message" id="success-message" role="alert">
+                    Thank you! Your message has been sent successfully.
+                </div>
+                <form id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="contact-name">Full Name *</label>
+                        <input 
+                            type="text" 
+                            id="contact-name" 
+                            data-testid="test-contact-name"
+                            required
+                            aria-describedby="error-name"
+                        >
+                        <div class="error-message" id="error-name" data-testid="test-contact-error-name"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">Email *</label>
+                        <input 
+                            type="email" 
+                            id="contact-email" 
+                            data-testid="test-contact-email"
+                            required
+                            aria-describedby="error-email"
+                        >
+                        <div class="error-message" id="error-email" data-testid="test-contact-error-email"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-subject">Subject *</label>
+                        <input 
+                            type="text" 
+                            id="contact-subject" 
+                            data-testid="test-contact-subject"
+                            required
+                            aria-describedby="error-subject"
+                        >
+                        <div class="error-message" id="error-subject" data-testid="test-contact-error-subject"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message">Message *</label>
+                        <textarea 
+                            id="contact-message" 
+                            data-testid="test-contact-message"
+                            required
+                            aria-describedby="error-message"
+                        ></textarea>
+                        <div class="error-message" id="error-message" data-testid="test-contact-error-message"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" data-testid="test-contact-submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- About Me page section -->
+        <section id="about" class="page-section" data-testid="test-about-page">
+            <div class="about-page">
+                <h1>About Me</h1>
+
+<section>
+  <h2>Bio</h2>
+  <p data-testid="test-about-bio">
+    I'm a creative and growth-oriented developer with a strong focus on building
+    meaningful digital experiences. My journey in tech has been shaped by
+    curiosity, self-learning, and a deep passion for solving real-world
+    problems through clean, scalable code. I enjoy transforming ideas into
+    interactive, user-focused products that make a difference.
+  </p>
+</section>
+
+<section>
+  <h2>Goals in This Program</h2>
+  <p data-testid="test-about-goals">
+    My goals in this program are to sharpen my technical depth, gain stronger
+    architectural thinking, and collaborate with others who share the same
+    hunger for innovation. I want to explore how technology can empower
+    individuals and communities, and build solutions that are not just
+    functional, but impactful.
+  </p>
+</section>
+
+<section>
+  <h2>Areas of Low Confidence</h2>
+  <p data-testid="test-about-confidence">
+    While I'm confident in full-stack development, I’m still growing in areas
+    like advanced DevOps, CI/CD automation, and large-scale system optimization.
+    I’m actively improving my understanding of cloud infrastructure and
+    production scalability so I can deliver more resilient and efficient
+    solutions.
+  </p>
+</section>
+
+<section>
+  <h2>Note to Future Self</h2>
+  <p data-testid="test-about-future-note">
+    Keep building. Keep learning. Stay humble, even as your skills grow. Remember
+    that progress takes time , consistency always wins. Continue leading with
+    empathy, collaborate openly, and never stop being curious about how things
+    work under the hood.
+  </p>
+</section>
+
+<section>
+  <h2>Extra Thoughts</h2>
+  <p data-testid="test-about-extra">
+    I strongly believe that innovation thrives in diverse, inclusive
+    environments where everyone’s voice is heard. Collaboration, clear
+    communication, and mutual respect are at the core of great teams, and I
+    aim to bring those values into every project I’m part of.
+  </p>
+</section>
+
+            </div>
+        </section>
+    </main>
   <!-- Link external JS -->
   <script src="script.js"></script>
 </body>
 </html>
+
+
